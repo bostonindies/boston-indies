@@ -1,0 +1,26 @@
+title: "BOSTON INDIES 💀"
+
+markdown: kramdown
+future: false
+
+permalink: /news/:year/:month/:day/:title
+
+
+legal: "© Boston Indies, all rights reserved."
+
+
+discord_invite: "https://discord.gg/sJrv3z7kgj"
+
+
+
+collections:
+  events:
+    output: true
+  socials:
+    output: false
+
+
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
