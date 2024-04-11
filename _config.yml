@@ -1,12 +1,15 @@
-title: "BOSTON INDIES 💀"
+title: "BOSTON INDIES 🔮💀"
 
 markdown: kramdown
 future: false
+timezone: America/New_York
 
 permalink: /news/:year/:month/:day/:title
 
+url: https://witchcat.net
 
 legal: "© Boston Indies, all rights reserved."
+
 
 
 discord_invite: "https://discord.gg/sJrv3z7kgj"
@@ -16,8 +19,7 @@ discord_invite: "https://discord.gg/sJrv3z7kgj"
 collections:
   events:
     output: true
-  socials:
-    output: false
+    permalink: /:collection/:title
 
 
 

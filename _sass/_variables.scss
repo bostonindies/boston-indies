@@ -1,0 +1,41 @@
+// Fonts.
+@font-face
+{
+    font-family: 'tangerine';
+    src: url(/assets/resources/tangerine.otf);
+}
+
+$font: 'tangerine';
+
+// Colors.
+$colorBlack: #231f20;
+$colorYellow: #f0e921;
+$colorPink: #d52991;
+
+// Spacing.
+$spacing: 3rem;
+$spacingTablet: 5vw;
+$spacingMobile: 6vw;
+
+$spacingHalf: 1.5rem;
+$spacingHalfTablet: 2.5vw;
+$spacingHalfMobile: 3vw;
+
+
+
+// Mobile formatting.
+@mixin tablet
+{
+    @media screen and (max-width: 1216px)
+    {
+        @content;
+    }
+}
+
+@mixin mobile
+{
+    @media screen and (max-width: 600px)
+    {
+        @content;
+    }
+}

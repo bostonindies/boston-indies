@@ -1,0 +1,42 @@
+body
+{
+    font-family: $font;
+    color: white;
+    
+    background-color: #d52991;
+
+    background-image: url("/assets/resources/background.jpg");
+    background-repeat: repeat;
+    background-position: top;
+    background-size: 40rem;
+
+    margin: 0;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+.wrapper
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+}
+
+.content
+{    
+    
+    padding: $spacingHalf;
+
+    width: 1152px;
+    
+    border-width: 5rem;
+    border-style: solid;
+    border-image: url("/assets/resources/box.png");
+    border-image-slice: 20% fill;
+    border-image-repeat: round;
+}

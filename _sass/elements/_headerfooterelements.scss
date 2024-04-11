@@ -1,0 +1,29 @@
+.header-content, .footer-content
+{
+    background-color: $colorBlack;
+
+    padding: $spacing;
+
+    display: flex;
+    justify-content: center;
+}
+
+.header-edge, .footer-edge
+{
+    height: 3rem;
+    
+    background-image: url("/assets/resources/edge.png");
+    background-position: top;
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+.footer-edge
+{
+    scale: (-1);
+}
+
+.header-content .logo
+{
+    width: 25rem;
+}
