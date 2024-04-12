@@ -1,0 +1,9 @@
+<a href="{{ include.link }}" target="_blank" class="button">
+    {% if include.icon %}
+    <img src="{{ include.icon }}">
+    {% endif %}
+
+    {% if include.text %}
+    <div>{{ include.text }}</div>
+    {% endif %}
+</a>

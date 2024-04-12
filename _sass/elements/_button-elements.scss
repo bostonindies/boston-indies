@@ -1,0 +1,35 @@
+.button-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacingQuarter;
+    
+    margin-top: $spacingHalf;
+    margin-bottom: $spacingHalf;
+}
+
+.button
+{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: $spacingQuarter;
+
+    font-family: $fontHeader;
+
+    border-radius: 99999px;
+
+    color: $colorBlack;
+    background-color: $colorYellow;
+
+    text-decoration: none;
+
+    padding: $spacingHalf;
+
+    font-size: 1.5rem;
+}
+
+.button img
+{
+    height: auto;
+}

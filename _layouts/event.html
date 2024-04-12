@@ -33,15 +33,25 @@ https://calendar.google.com/calendar/render?action=TEMPLATE
 &ctz=America/New_York
 {% endcapture %}
 
-
 <div class="bullet-point-list">
-    {% include elements/bullet-point.html icon="/assets/resources/icons/date.png" text=processed_date link=processed_date_link %}
-    {% include elements/bullet-point.html icon="/assets/resources/icons/location.png" text=processed_location link=processed_location_link %}
+    {% include elements/bullet-point.html icon="/assets/resources/icons/calendar-event-white.png" text=processed_date %}
+    {% include elements/bullet-point.html icon="/assets/resources/icons/location-white.png" text=processed_location %}
 </div>
 
 <h1>{{ page.title }}</h1>
 
 {{ content }}
+
+<div class="button-list">
+    {% include elements/button.html text="Sign up on Meetup!" link=page.link_meetup %}
+
+    {% include elements/button.html icon="/assets/resources/icons/calendar-add-black.png" link=processed_date_link %}
+    {% include elements/button.html icon="/assets/resources/icons/directions-black.png" link=processed_location_link %}
+
+    {% if page.link_tim_tickets %}
+        {% include elements/button.html text="Tim Tickets" link=page.link_tim_tickets %}
+    {% endif %}
+</div>
 
 {% for current_site_location in site.locations %}
     {% if current_site_location.index == page.location %}
