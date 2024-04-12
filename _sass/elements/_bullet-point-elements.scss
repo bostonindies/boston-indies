@@ -1,0 +1,33 @@
+.bullet-point-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacingQuarter;
+    
+    margin-top: $spacingHalf;
+    margin-bottom: $spacingHalf;
+}
+
+.bullet-point
+{    
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+
+    width: fit-content;
+
+    background-color: $colorPink;
+
+    border-radius: $spacingQuarter;
+
+    padding: $spacingQuarter;
+    padding-right: $spacingHalf;
+}
+
+.bullet-point img
+{
+    height: auto;
+
+    margin-right: $spacingQuarter;
+}

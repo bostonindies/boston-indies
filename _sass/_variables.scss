@@ -5,7 +5,10 @@
     src: url(/assets/resources/tangerine.otf);
 }
 
-$font: 'tangerine';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$fontHeader: 'tangerine';
+$fontBody: "Open Sans", sans-serif;;
 
 // Colors.
 $colorBlack: #231f20;
@@ -13,29 +16,6 @@ $colorYellow: #f0e921;
 $colorPink: #d52991;
 
 // Spacing.
-$spacing: 3rem;
-$spacingTablet: 5vw;
-$spacingMobile: 6vw;
-
-$spacingHalf: 1.5rem;
-$spacingHalfTablet: 2.5vw;
-$spacingHalfMobile: 3vw;
-
-
-
-// Mobile formatting.
-@mixin tablet
-{
-    @media screen and (max-width: 1216px)
-    {
-        @content;
-    }
-}
-
-@mixin mobile
-{
-    @media screen and (max-width: 600px)
-    {
-        @content;
-    }
-}
+$spacing: 4rem;
+$spacingHalf: 2rem;
+$spacingQuarter: 1rem;

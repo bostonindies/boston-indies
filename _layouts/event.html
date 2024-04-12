@@ -2,4 +2,41 @@
 layout: default
 ---
 
+<img src="/assets/banners/{{ page.banner }}">
+
+
+
+{% capture processed_date %}
+    {{ page.date | date: "%A, %B %e at %I:%M %P %Z" }}
+{% endcapture %}
+
+{% capture processed_location %}
+    {% if page.location_room %}
+        {{ page.location_room }}, 
+    {% endif %}
+    {% for current_site_location in site.locations %}
+        {% if current_site_location.index == page.location %}
+            {{ current_site_location.title }}, {{ current_site_location.address }}
+            {% capture processed_location_link %}https://maps.google.com/?q={{ current_site_location.address }}{% endcapture %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+{% endcapture %}
+
+
+
+<div class="bullet-point-list">
+    {% include elements/bullet-point.html icon="/assets/resources/icons/date.png" text=processed_date %}
+    {% include elements/bullet-point.html icon="/assets/resources/icons/location.png" text=processed_location link=processed_location_link %}
+</div>
+
+<h1>{{ page.title }}</h1>
+
 {{ content }}
+
+{% for current_site_location in site.locations %}
+    {% if current_site_location.index == page.location %}
+        {{ current_site_location.content | markdownify}}
+        {% break %}
+    {% endif %}
+{% endfor %}

@@ -5,7 +5,8 @@
     padding: $spacing;
 
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .header-edge, .footer-edge
@@ -23,7 +24,16 @@
     scale: (-1);
 }
 
-.header-content .logo
+.header-logo
 {
     width: 25rem;
+}
+
+.header-links
+{
+    margin-top: $spacingHalf;
+    display: flex;
+    gap: $spacing;
+    font-family: $fontHeader;
+    font-size: 1.5rem;
 }

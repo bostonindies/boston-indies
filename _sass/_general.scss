@@ -1,6 +1,6 @@
 body
 {
-    font-family: $font;
+    font-family: $fontBody;
     color: white;
     
     background-color: #d52991;
@@ -11,6 +11,30 @@ body
     background-size: 40rem;
 
     margin: 0;
+
+    animation: animatedBackground 48s linear infinite;
+
+    cursor: url("/assets/resources/wand.png"), auto;
+}
+
+@keyframes animatedBackground
+{
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 0px -1024px;
+    }
+}
+
+h1, h2, h3
+{
+    font-family: $fontHeader;
+}
+
+a
+{
+    color: $colorYellow;
 }
 
 img
@@ -23,20 +47,20 @@ img
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: $spacing;
-    padding-bottom: $spacing;
 }
 
 .content
 {    
-    
-    padding: $spacingHalf;
+    margin: $spacing;
+    padding: $spacing;
 
     width: 1152px;
     
-    border-width: 5rem;
+    border: 0;
+    border-top: $spacing;
+    border-bottom: $spacing;
     border-style: solid;
-    border-image: url("/assets/resources/box.png");
-    border-image-slice: 20% fill;
-    border-image-repeat: round;
+    border-image: url("/assets/resources/box-black.png");
+    border-image-slice: 30% 0% fill;
+    border-image-repeat: stretch;
 }
