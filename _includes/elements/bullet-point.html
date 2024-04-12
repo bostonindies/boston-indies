@@ -1,10 +1,11 @@
-{% if include.link %}
-<a href="{{ include.link }}" target="_blank">
-{% endif %}
-    <div class="bullet-point">
-        <img src="{{ include.icon }}">
-        <p>{{ include.text }}</p>
-    </div>
-{% if include.link %}
-</a>
-{% endif %}
+<div class="bullet-point">
+    <img src="{{ include.icon }}">
+
+    {% if include.link %}
+        <a href="{{ include.link }}" target="_blank">
+    {% endif %}
+    <p>{{ include.text }}</p>
+    {% if include.link %}
+        </a>
+    {% endif %}
+</div>
