@@ -67,7 +67,18 @@ img
 
 .container
 {
-    width: 1152px;
+    width: 1080px;
+
+    @include mobile
+    {
+        width: 100%;
+    }
+}
+
+.banner
+{
+    display: flex;
+    flex-direction: column;
 }
 
 .content

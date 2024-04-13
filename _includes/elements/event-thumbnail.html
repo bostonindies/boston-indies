@@ -1,5 +1,5 @@
 <a href="{{ include.event.url }}" class="event-thumbnail expand no-select">
     <img src="/assets/banners/{{ include.event.banner }}">
     <div class="event-thumbnail-title">{{ include.event.title }}</div>
-    <div class="event-thumbnail-date">{{ include.event.date | date: "%A, %B %e" }}</div>
+    <div class="event-thumbnail-date"><img src="/assets/resources/icons/calendar-event-black.png">{{ include.event.date | date: "%A, %B %e at %I:%M %P %Z" }}</div>
 </a>
