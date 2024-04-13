@@ -1,3 +1,13 @@
+html
+{
+    font-size: 16px;
+
+    @include mobile
+    {
+        font-size: 20px;
+    }
+}
+
 body
 {
     font-family: $fontBody;
@@ -15,11 +25,6 @@ body
     animation: animatedBackground 48s linear infinite;
 
     cursor: url("/assets/resources/wand.png"), auto;
-
-    @include mobile
-    {
-        font-size: 1.125em;
-    }
 }
 
 @keyframes animatedBackground
