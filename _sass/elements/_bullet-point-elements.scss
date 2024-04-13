@@ -12,6 +12,7 @@
 {    
     display: flex;
     align-items: center;
+    gap: $spacingQuarter;
 
     font-weight: bold;
 
@@ -27,9 +28,7 @@
 
 .bullet-point img
 {
-    height: auto;
-
-    margin-right: $spacingQuarter;
+    height: 2rem;
 }
 
 .bullet-point a

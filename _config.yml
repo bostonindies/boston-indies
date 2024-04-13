@@ -18,6 +18,10 @@ collections:
     permalink: :collection/:title
   locations:
     output: false
+  socials:
+    output: false
+  links:
+    output: false
 
 # Set the Sass partials directory, as we're using @imports
 sass:

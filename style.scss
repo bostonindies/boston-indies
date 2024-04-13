@@ -1,11 +1,21 @@
 ---
 ---
 
-// Import everything you need.
+// Import core files.
 @import "variables";
 @import "general";
 
 
-@import "elements/headerfooterelements";
+
+// Import elements.
 @import "elements/bullet-point-elements";
 @import "elements/button-elements";
+@import "elements/header-footer-elements";
+@import "elements/link-elements";
+
+
+
+// Import tools.
+@import "tools/effect-tools";
+@import "tools/no-select-tools";
+@import "tools/video-wrapper-tools";

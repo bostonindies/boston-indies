@@ -15,6 +15,11 @@ body
     animation: animatedBackground 48s linear infinite;
 
     cursor: url("/assets/resources/wand.png"), auto;
+
+    @include mobile
+    {
+        font-size: 1.125em;
+    }
 }
 
 @keyframes animatedBackground
@@ -51,16 +56,21 @@ img
 
 .content
 {    
-    margin: $spacing;
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+
     padding: $spacing;
 
     width: 1152px;
-    
+}
+
+.cut-edges
+{
     border: 0;
     border-top: $spacing;
     border-bottom: $spacing;
     border-style: solid;
     border-image: url("/assets/resources/box-black.png");
-    border-image-slice: 30% 0% fill;
-    border-image-repeat: stretch;
+    border-image-slice: 45% 0% fill;
+    border-image-repeat: repeat;
 }

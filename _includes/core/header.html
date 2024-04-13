@@ -1,11 +1,8 @@
-<header>
-    <div class="header-content">
-        <a href="/"><img class="header-logo" src="/assets/resources/logos/header.png"></a>
-        <div class="header-links">
-            <a href="/">home</a>
-            <a href="/">events</a>
-            <a href="/">about</a>
-        </div>
+<header class="header-content cut-edges no-select" style="border-top: 0;">
+    <a href="/"><img class="header-logo expand" src="/assets/resources/logos/header.png"></a>
+    <div class="link-list">
+        {% for link in site.links %}
+            <a href="{{ link.link }}">{{ link.title }}</a>
+        {% endfor %}
     </div>
-    <div class="header-edge"></div>
 </header>

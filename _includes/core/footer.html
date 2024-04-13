@@ -1,6 +1,9 @@
-<footer>
-    <div class="footer-edge"></div>
-    <div class="footer-content">
-        {{ site.legal }}
+<footer class="footer-content cut-edges no-select" style="border-bottom: 0;">
+    <div class="footer-socials">
+        {% for social in site.socials -%}
+            <a href="{{ social.link }}" target="_blank"><img src="{{ social.icon }}"></a>
+        {% endfor -%}
     </div>
+
+    {{ site.legal }}
 </footer>
