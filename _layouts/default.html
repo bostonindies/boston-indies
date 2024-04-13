@@ -28,13 +28,14 @@ layout: meta
                 {{ content }}
 
                 <div class="no-select" style="text-align: center;">
+                    <div class="spacer"></div>
                     <div class="link-list">
                         {% for link in site.links %}
-                            <a href="{{ link.link }}">{{ link.title }}</a>
+                            <a href="{{ link.link }}">{{ link.title | upcase }}</a>
                         {% endfor %}
                     </div>
     
-                    <p><b>Join us on<b></p>
+                    <p><b>JOIN US ON<b></p>
                     {% for social in site.socials -%}
                         {% if social.index == "discord" -%}
                             {% include elements/button-social.html social=social -%}

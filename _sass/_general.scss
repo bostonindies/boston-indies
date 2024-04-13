@@ -84,6 +84,9 @@ img
 .content
 {    
     padding: $spacing;
+
+    padding-top: $spacingHalf;
+    padding-bottom: $spacingHalf;
 }
 
 .cut-edges
@@ -95,4 +98,9 @@ img
     border-image: url("/assets/resources/box-black.png");
     border-image-slice: 45% 0% fill;
     border-image-repeat: repeat;
+}
+
+.spacer
+{
+    padding-top: $spacing;
 }

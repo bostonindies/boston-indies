@@ -2,7 +2,7 @@
     <a href="/"><img class="header-logo expand" src="/assets/resources/logos/header.png"></a>
     <div class="link-list">
         {% for link in site.links %}
-            <a href="{{ link.link }}">{{ link.title }}</a>
+            <a href="{{ link.link }}">{{ link.title | upcase }}</a>
         {% endfor %}
     </div>
 </header>

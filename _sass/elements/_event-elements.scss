@@ -39,5 +39,15 @@
 
 .event-thumbnail-date
 {
+    display: flex;
+    align-items: center;
+    gap: $spacingQuarter;
+    
     font-weight: bold;
+}
+
+.event-thumbnail-date img
+{
+    border-radius: 0;
+    height: 2.5rem;
 }
