@@ -2,9 +2,7 @@
 layout: default
 ---
 
-<img class="no-select" src="/assets/banners/{{ page.banner }}">
-
-
+<h1>{{ page.title }}</h1>
 
 {% capture processed_location %}
     {% if page.location_room %}
@@ -37,8 +35,6 @@ https://calendar.google.com/calendar/render?action=TEMPLATE
     {% include elements/bullet-point.html icon="/assets/resources/icons/calendar-event-white.png" text=processed_date %}
     {% include elements/bullet-point.html icon="/assets/resources/icons/location-white.png" text=processed_location %}
 </div>
-
-<h1>{{ page.title }}</h1>
 
 {{ content }}
 

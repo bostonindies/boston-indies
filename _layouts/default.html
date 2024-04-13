@@ -6,22 +6,32 @@ layout: meta
     {% include core/header.html -%}
 
     <div class="wrapper">
-        <div class="content cut-edges">
-            {{ content }}
+        
+        {% if page.banner %}
+            <div class="container">
+                <img src="/assets/banners/{{ page.banner }}">
+            </div>
+        {% endif %}
 
-            <div class="no-select" style="text-align: center;">
-                <div class="link-list">
-                    {% for link in site.links %}
-                        <a href="{{ link.link }}">{{ link.title }}</a>
-                    {% endfor %}
+
+        <div class="container cut-edges">
+            <div class="content">
+                {{ content }}
+
+                <div class="no-select" style="text-align: center;">
+                    <div class="link-list">
+                        {% for link in site.links %}
+                            <a href="{{ link.link }}">{{ link.title }}</a>
+                        {% endfor %}
+                    </div>
+    
+                    <p><b>Join us on<b></p>
+                    {% for social in site.socials -%}
+                        {% if social.index == "discord" -%}
+                            {% include elements/button-social.html social=social -%}
+                        {% endif -%}
+                    {% endfor -%}
                 </div>
-
-                <p><b>Join us on<b></p>
-                {% for social in site.socials -%}
-                    {% if social.index == "discord" -%}
-                        {% include elements/button-social.html social=social -%}
-                    {% endif -%}
-                {% endfor -%}
             </div>
         </div>
         

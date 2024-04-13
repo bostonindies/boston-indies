@@ -55,18 +55,24 @@ img
 .wrapper
 {
     width: 100%;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing;
+
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+}
+
+.container
+{
+    width: 1152px;
 }
 
 .content
 {    
-    margin-top: $spacing;
-    margin-bottom: $spacing;
-
     padding: $spacing;
-
-    width: 1152px;
 }
 
 .cut-edges

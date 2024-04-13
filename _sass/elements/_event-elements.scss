@@ -1,0 +1,43 @@
+.event-thumbnail-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event-thumbnail
+{
+    display: flex;
+    flex-direction: column;
+    
+    text-decoration: none;
+
+    margin-bottom: $spacing;
+
+    width: 45%;
+
+    padding: $spacingQuarter;
+
+    background-color: $colorYellow;
+    color: $colorBlack;
+
+    border-radius: 1rem;
+
+    gap: $spacingQuarter;
+}
+
+.event-thumbnail img
+{
+    border-radius: 1rem;
+}
+
+.event-thumbnail-title
+{
+    font-family: $fontHeader;
+    font-size: 1.5rem;
+}
+
+.event-thumbnail-date
+{
+    font-weight: bold;
+}
