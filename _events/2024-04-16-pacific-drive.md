@@ -3,8 +3,8 @@ layout: event
 
 title: "A New Kind of Driving Game: A Chat with Pacific Drive Game Director Seth Rosen"
 
-date: 2024-04-16 06:00:00 America/New_York
-end_date: 2024-04-16 09:00:00 America/New_York
+date: 2024-04-16 18:00:00 America/New_York
+end_date: 2024-04-16 21:00:00 America/New_York
 
 location: mit-stata-center
 location_room: "Room 32-155"

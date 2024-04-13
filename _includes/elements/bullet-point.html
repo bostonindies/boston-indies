@@ -4,7 +4,7 @@
     {% if include.link %}
         <a href="{{ include.link }}" target="_blank">
     {% endif %}
-    <p>{{ include.text }}</p>
+    <p>{{ include.text | strip }}</p>
     {% if include.link %}
         </a>
     {% endif %}
