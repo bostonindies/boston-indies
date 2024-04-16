@@ -24,6 +24,8 @@ collections:
     output: false
   links:
     output: false
+  badges:
+    output: false
 
 # Set the Sass partials directory, as we're using @imports
 sass:

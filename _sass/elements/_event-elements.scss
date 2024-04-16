@@ -1,8 +1,13 @@
 .event-thumbnail-list
 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(min(10px, 100%), 1fr));
+    display: grid;
+    gap: 2rem;
+
+    @include mobile
+    {
+        grid-template-columns: repeat(1, minmax(min(10px, 100%), 1fr));
+    }
 }
 
 .event-thumbnail
@@ -11,10 +16,6 @@
     flex-direction: column;
     
     text-decoration: none;
-
-    margin-bottom: $spacingHalf;
-
-    width: 45%;
 }
 
 .event-thumbnail img

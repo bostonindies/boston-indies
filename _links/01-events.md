@@ -1,4 +1,4 @@
 ---
 title: "events"
-link: "/"
+link: "/events"
 ---

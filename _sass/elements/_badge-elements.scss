@@ -1,0 +1,27 @@
+.badges
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.badges a
+{
+    display: flex;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.badges img
+{
+    margin: 0;
+    padding: 0;
+
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}

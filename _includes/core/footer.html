@@ -5,6 +5,18 @@
         {% endfor -%}
     </div>
 
+    <div class="badges element">
+        {% for badge in site.badges -%}
+            {% if badge.link %}
+                <a href="{{ badge.link }}" target="_blank">
+            {% endif -%}
+                    <img src="/assets/badges/{{ badge.image }}">
+            {% if badge.link %}
+                </a>
+            {% endif -%}
+        {% endfor -%}
+    </div>
+
     {{ site.legal }}
 
     <p>Website by <a target="_blank" href="https://yukonmakes.games/">Yukon</a></p>

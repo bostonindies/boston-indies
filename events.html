@@ -1,0 +1,65 @@
+---
+layout: page
+
+title: "ALL EVENTS"
+---
+
+<p>Here's a list of all the events we've hosted!</p>
+
+{%- capture processed_now_date -%}
+    {{ "now" | date: '%s' }}
+{%- endcapture -%}
+
+
+
+{% assign display_upcoming_events = false %}
+
+{% for event in site.events %}
+    {%- capture processed_event_date -%}
+        {{ event.end_date | date: "%s" }}
+    {%- endcapture -%}
+
+    {% if processed_now_date < processed_event_date %}
+        
+        {% if display_upcoming_events == false %}
+            {% assign display_upcoming_events = true %}
+            <h1>UPCOMING EVENTS</h1>
+            <div class="event-thumbnail-list">
+        {% endif %}
+
+        {% include elements/event-thumbnail.html event=event %}
+
+    {% endif %}
+
+{% endfor %}
+
+{% if display_upcoming_events == true %}
+    </div>
+{% endif %}
+
+
+
+{% assign display_past_events = false %}
+
+{% for event in site.events %}
+    {%- capture processed_event_date -%}
+        {{ event.end_date | date: "%s" }}
+    {%- endcapture -%}
+
+    {% if processed_now_date >= processed_event_date %}
+        
+        {% if display_past_events == false %}
+            {% assign display_past_events = true %}
+            <h1>PAST EVENTS</h1>
+            <div class="event-thumbnail-list">
+        {% endif %}
+
+        {% include elements/event-thumbnail.html event=event %}
+
+    {% endif %}
+
+{% endfor %}
+
+{% if display_past_events == true %}
+    </div>
+{% endif %}
