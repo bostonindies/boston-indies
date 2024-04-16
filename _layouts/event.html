@@ -1,8 +1,6 @@
 ---
-layout: default
+layout: page
 ---
-
-<h1>{{ page.title | upcase }}</h1>
 
 {% capture processed_location %}
     {% if page.location_room %}
@@ -32,8 +30,8 @@ https://calendar.google.com/calendar/render?action=TEMPLATE
 {% endcapture %}
 
 <div class="bullet-point-list">
-    {% include elements/bullet-point.html icon="/assets/resources/icons/calendar-event-white.png" text=processed_date %}
-    {% include elements/bullet-point.html icon="/assets/resources/icons/location-white.png" text=processed_location %}
+    {% include elements/bullet-point.html google_icon="event" text=processed_date %}
+    {% include elements/bullet-point.html google_icon="location_on" text=processed_location %}
 </div>
 
 {{ content }}
@@ -41,8 +39,8 @@ https://calendar.google.com/calendar/render?action=TEMPLATE
 <div class="button-list">
     {% include elements/button.html text="Sign up on Meetup!" link=page.link_meetup %}
 
-    {% include elements/button.html icon="/assets/resources/icons/calendar-add-black.png" link=processed_date_link %}
-    {% include elements/button.html icon="/assets/resources/icons/directions-black.png" link=processed_location_link %}
+    {% include elements/button.html google_icon="calendar_add_on" link=processed_date_link %}
+    {% include elements/button.html google_icon="directions" link=processed_location_link %}
 
     {% if page.link_tim_tickets %}
         {% include elements/button.html text="Tim Tickets" link=page.link_tim_tickets %}

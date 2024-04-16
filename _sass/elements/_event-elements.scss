@@ -15,20 +15,40 @@
     margin-bottom: $spacingHalf;
 
     width: 45%;
+}
+
+.event-thumbnail img
+{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.event-thumbnail-information
+{
+    display: flex;
+    flex-direction: row;
+    gap: $spacingQuarter;
 
     padding: $spacingQuarter;
 
     background-color: $colorYellow;
     color: $colorBlack;
 
-    border-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
 
+.event-thumbnail-information-left
+{
+    display: flex;
+    flex-direction: column;
     gap: $spacingQuarter;
 }
 
-.event-thumbnail img
+.event-thumbnail-information-right
 {
-    border-radius: 1rem;
+    display: flex;
+    align-items: flex-end;
 }
 
 .event-thumbnail-title

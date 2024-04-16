@@ -3,6 +3,12 @@
     <img src="{{ include.icon }}">
     {% endif %}
 
+    {% if include.google_icon %}
+    <span class="material-symbols-rounded material-symbols-48">
+        {{ include.google_icon }}
+    </span>
+    {% endif %}
+
     {% if include.text %}
     <div>{{ include.text | upcase }}</div>
     {% endif %}

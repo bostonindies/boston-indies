@@ -2,15 +2,33 @@
 layout: default
 ---
 
-<p>{{ site.about }}</p>
+{% for event in site.events %}
 
-<h1>UPCOMING EVENTS</h1>
-<div class="event-thumbnail-list">
-    {% for event in site.events %}
-        {% include elements/event-thumbnail.html event=event %}
-    {% endfor %}
-</div>
+    <a href="{{ event.url }}" class="banner no-select expand-banner">
+        <img src="/assets/banners/{{ event.banner }}">
 
-<div class="video-wrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/223zWm8GFJ4?si=REYw_P8kRZV9FpGD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="content banner-information">
+            <h1>{{ event.title }}</h1>
+            <span class="material-symbols-rounded material-symbols-48">
+                double_arrow
+            </span>
+        </div>
+    </a>
+    {% break %}
+
+{% endfor %}
+
+<div class="content">
+    <p>{{ site.about }}</p>
+
+    <h1>UPCOMING EVENTS</h1>
+    <div class="event-thumbnail-list">
+        {% for event in site.events %}
+            {% include elements/event-thumbnail.html event=event %}
+        {% endfor %}
+    </div>
+    
+    <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ site.featured_video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 </div>

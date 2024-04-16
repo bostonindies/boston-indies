@@ -77,8 +77,21 @@ img
 
 .banner
 {
+    padding-top: $spacingHalf;
+    
     display: flex;
     flex-direction: column;
+}
+
+.banner-information
+{
+    background-color: $colorYellow;
+    color: $colorBlack;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $spacingQuarter;
 }
 
 .content

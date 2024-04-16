@@ -1,5 +1,15 @@
 <div class="bullet-point">
-    <img class="no-select" src="{{ include.icon }}">
+    {% if include.google_icon %}
+        <span class="material-symbols-rounded material-symbols-24">
+            {{ include.google_icon }}
+        </span>
+    {% endif %}
+
+    {% if include.icon %}
+        <img class="no-select" src="{{ include.icon }}">
+    {% endif %}
+
+    
 
     {% if include.link %}
         <a href="{{ include.link }}" target="_blank">
