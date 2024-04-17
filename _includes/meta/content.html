@@ -29,9 +29,9 @@
 
 <!-- Banner -->
 {% if page.banner -%}
-  <meta property="og:image" content="{{ site.url | append: page.banner }}"/>
+  <meta property="og:image" content="{{ site.url | append: "/assets/banners/" | append: page.banner }}"/>
   <meta name="twitter:card"  content="summary_large_image">
-  <meta name="twitter:image" content="{{ site.url | append: page.banner }}">
+  <meta name="twitter:image" content="{{ site.url | append: "/assets/banners/" | append: page.banner }}">
 {% else -%}
 <meta property="og:image" content="{{ site.url | append: "/assets/resources/logos/icon.jpg" }}"/>
 <meta name="twitter:card"  content="summary">
