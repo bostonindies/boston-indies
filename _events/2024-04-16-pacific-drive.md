@@ -11,8 +11,11 @@ location_room: "Room 32-155"
 
 banner: "2024-pacific-drive.jpg"
 
-link_meetup: "https://www.meetup.com/bostongamedev/events/299849429/"
-link_tim_tickets: "https://tim-tickets.atlas-apps.mit.edu/bGAfNsyqBET6sAN1A"
+information:
+ - index: meetup
+   link: "https://www.meetup.com/bostongamedev/events/299849429/"
+ - index: tim-tickets
+   link: "https://tim-tickets.atlas-apps.mit.edu/bGAfNsyqBET6sAN1A"
 ---
 
 Join us for an interview and Q&A with the game director of the recent hit Pacific Drive! We'll be joined by Seth Rosen, Game Director, and Bryant Francis, Senior Editor at Game Developer. We'll be talking about the development process for Pacific Drive, Seth's design ethos, and taking audience questions.

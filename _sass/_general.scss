@@ -37,9 +37,18 @@ body
     }
 }
 
-h1, h2, h3
+h1, h2, h3, .section-header
 {
     font-family: $fontHeader;
+    font-weight: bold;
+
+    margin-top: $spacingHalf;
+    margin-bottom: $spacingQuarter;
+}
+
+.section-header
+{
+    font-size: 3em;
 }
 
 a
@@ -122,4 +131,13 @@ img
 {
     margin-top: $spacingHalf;
     margin-bottom: $spacingHalf;
+}
+
+.area
+{
+    background-color: $colorPink;
+
+    border-radius: $spacingQuarter;
+
+    padding: $spacingQuarter;
 }

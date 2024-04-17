@@ -9,70 +9,38 @@ layout: default
 {%- endcapture -%}
 
 
-{% assign featured_event = "null" %}
-
-{% for event in site.events %}
-
-    {%- capture processed_event_date -%}
-        {{ event.end_date | date: "%s" }}
-    {%- endcapture -%}
-
-    {% if processed_now_date < processed_event_date %}
-
-        <a href="{{ event.url }}" class="banner no-select expand-banner">
-            <img src="/assets/banners/{{ event.banner }}">
-
-            <div class="content banner-information">
-                <h1>{{ event.title }}</h1>
-                <span class="material-symbols-rounded material-symbols-48">
-                    double_arrow
-                </span>
-            </div>
-        </a>
-        {% assign featured_event = event %}
-        {% break %}
-
-    {% endif %}
-
-{% endfor %}
-
-
 
 <div class="content">
-    {% if featured_event == "null" %}
-        <div class="element" style="text-align: center;">
-            <h1>MORE EVENTS COMING SOON!</h1>
-        </div>
-    {% endif %}
-
     <p>{{ site.about }}</p>
 
     {% assign display_upcoming_events = false %}
     
     {% for event in site.events %}
-        {% if featured_event != event %}
 
-            {%- capture processed_event_date -%}
-                {{ event.end_date | date: "%s" }}
-            {%- endcapture -%}
+        {%- capture processed_event_date -%}
+            {{ event.end_date | date: "%s" }}
+        {%- endcapture -%}
 
-            {% if processed_now_date < processed_event_date %}
-                
-                {% if display_upcoming_events == false %}
-                    {% assign display_upcoming_events = true %}
-                    <h1>UPCOMING EVENTS</h1>
-                    <div class="event-thumbnail-list">
-                {% endif %}
-
-                {% include elements/event-thumbnail.html event=event %}
-
+        {% if processed_now_date < processed_event_date %}
+            
+            {% if display_upcoming_events == false %}
+                {% assign display_upcoming_events = true %}
+                <div class="section-header">UPCOMING EVENTS</div>
+                <div class="event-thumbnail-list area">
             {% endif %}
 
+            {% include elements/event-thumbnail.html event=event %}
+
         {% endif %}
+
     {% endfor %}
 
     {% if display_upcoming_events == true %}
         </div>
+    {% else %}
+    <div class="element area" style="text-align: center;">
+        <div class="section-header" style="margin: 0">MORE EVENTS COMING SOON!</div>
+    </div>
     {% endif %}
     
     

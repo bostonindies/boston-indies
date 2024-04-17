@@ -23,8 +23,8 @@ title: "ALL EVENTS"
         
         {% if display_upcoming_events == false %}
             {% assign display_upcoming_events = true %}
-            <h1>UPCOMING EVENTS</h1>
-            <div class="event-thumbnail-list">
+            <div class="section-header">UPCOMING EVENTS</div>
+            <div class="event-thumbnail-list area">
         {% endif %}
 
         {% include elements/event-thumbnail.html event=event %}
@@ -50,8 +50,8 @@ title: "ALL EVENTS"
         
         {% if display_past_events == false %}
             {% assign display_past_events = true %}
-            <h1>PAST EVENTS</h1>
-            <div class="event-thumbnail-list">
+            <div class="section-header">PAST EVENTS</div>
+            <div class="event-thumbnail-list area">
         {% endif %}
 
         {% include elements/event-thumbnail.html event=event %}
