@@ -1,11 +1,6 @@
 html
 {
     font-size: 16px;
-
-    @include mobile
-    {
-        font-size: 20px;
-    }
 }
 
 body
@@ -109,6 +104,11 @@ img
 
     padding-top: $spacingHalf;
     padding-bottom: $spacingHalf;
+
+    @include mobile
+    {
+        padding: $spacingHalf;
+    }
 }
 
 .cut-edges
