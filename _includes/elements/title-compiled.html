@@ -1,11 +1,7 @@
-{%- assign title_compiled = page.title -%}
+{%- assign title_compiled = page.title | upcase -%}
 
-{%- if page.firstname -%}
-    {%- capture title_compiled %}{{ page.firstname }} {{ page.lastname }} {{ page.emoji }}{% endcapture -%}
-{%- elsif page.sortingtag -%}
-    {%- capture title_compiled %}News tagged with: {{ page.sortingtag }} {{ page.emoji }}{% endcapture -%}
-{%- else -%}
-    {%- capture title_compiled %}{{ page.title }} {{ page.emoji }}{% endcapture -%}
+{%- if page.emoji -%}
+    {%- capture title_compiled %}{{ page.title | upcase }} {{ page.emoji }}{% endcapture -%}
 {%- endif -%}
 
 {%- assign title_compiled = title_compiled | strip -%}
