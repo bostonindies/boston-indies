@@ -4,14 +4,16 @@ layout: default
 
 
 
-{%- capture processed_now_date -%}
-    {{ "now" | date: '%s' }}
-{%- endcapture -%}
+
 
 
 
 <div class="content">
     <p>{{ site.about }}</p>
+
+    {%- capture processed_now_date -%}
+        {{ "now" | date: '%s' }}
+    {%- endcapture -%}
 
     {% assign display_upcoming_events = false %}
     
@@ -26,7 +28,7 @@ layout: default
             {% if display_upcoming_events == false %}
                 {% assign display_upcoming_events = true %}
                 <div class="section-header">UPCOMING EVENTS</div>
-                <div class="event-thumbnail-list area">
+                <div class="event-thumbnail-list element area no-select">
             {% endif %}
 
             {% include elements/event-thumbnail.html event=event %}
@@ -38,13 +40,13 @@ layout: default
     {% if display_upcoming_events == true %}
         </div>
     {% else %}
-    <div class="element area" style="text-align: center;">
+    <div class="element area no-select" style="text-align: center;">
         <div class="section-header" style="margin: 0">MORE EVENTS COMING SOON!</div>
     </div>
     {% endif %}
     
     
-    <div class="video-wrapper element">
+    <div class="video-wrapper element no-select">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ site.featured_video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>

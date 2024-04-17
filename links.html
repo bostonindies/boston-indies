@@ -1,20 +1,23 @@
 ---
 layout: page
 
-title: "ALL EVENTS"
+title: "Welcome!"
 ---
 
-<p>Here's a list of all the events we've hosted!</p>
+<p>Welcome to <b>{{ site.title }}</b>!</p>
+
+<p>Here you can find a hub of all our stuff!</p>
+
+
 
 {%- capture processed_now_date -%}
     {{ "now" | date: '%s' }}
 {%- endcapture -%}
 
-
-
 {% assign display_upcoming_events = false %}
 
 {% for event in site.events %}
+
     {%- capture processed_event_date -%}
         {{ event.end_date | date: "%s" }}
     {%- endcapture -%}
@@ -34,32 +37,5 @@ title: "ALL EVENTS"
 {% endfor %}
 
 {% if display_upcoming_events == true %}
-    </div>
-{% endif %}
-
-
-
-{% assign display_past_events = false %}
-
-{% for event in site.events %}
-    {%- capture processed_event_date -%}
-        {{ event.end_date | date: "%s" }}
-    {%- endcapture -%}
-
-    {% if processed_now_date >= processed_event_date %}
-        
-        {% if display_past_events == false %}
-            {% assign display_past_events = true %}
-            <div class="section-header">PAST EVENTS</div>
-            <div class="event-thumbnail-list element area no-select">
-        {% endif %}
-
-        {% include elements/event-thumbnail.html event=event %}
-
-    {% endif %}
-
-{% endfor %}
-
-{% if display_past_events == true %}
     </div>
 {% endif %}
