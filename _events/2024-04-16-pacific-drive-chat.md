@@ -10,7 +10,7 @@ end_date: 2024-04-16 21:00:00 America/New_York
 location: mit-stata-center
 location_room: "Room 32-155"
 
-banner: "2024-pacific-drive.jpg"
+banner: "2024-april-pacific-drive.jpg"
 
 information:
  - index: meetup
