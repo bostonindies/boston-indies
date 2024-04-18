@@ -67,7 +67,7 @@ jobs:
           cacheFileName: 'feed-to-social-media-announcements.json'
           # Discord settings
           discordEnable: true
-          discordPostFormat: "# 📣 ANNOUNCING: {title} 🔮💀\n everyone\n\n{description}\n\n📝 **SIGN UP NOW!** 👀\n👉 {link}"
+          discordPostFormat: "# 📣 ANNOUNCING: {title} 🔮💀\n@everyone\n\n{description}\n\n📝 **SIGN UP NOW!** 👀\n👉 {link}"
           discordWebhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
   post-reminders-on-discord:
@@ -85,5 +85,5 @@ jobs:
           cacheFileName: 'feed-to-social-media-reminders.json'
           # Discord settings
           discordEnable: true
-          discordPostFormat: "# 🚨 REMINDER: {title} IS TONIGHT!!! 🔮💀\n everyone\n\n{description}\n\n⏰ **GRAB THE DEETS!** 🚗\n👉 {link}"
+          discordPostFormat: "# 🚨 REMINDER: {title} IS TONIGHT!!! 🔮💀\n@everyone\n\n{description}\n\n⏰ **GRAB THE DEETS!** 🚗\n👉 {link}"
           discordWebhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
