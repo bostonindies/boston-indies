@@ -5,7 +5,7 @@ title: "Demo Night @ The Open Space!"
 
 announcement_date: 2024-04-19 10:00:00 America/New_York
 date: 2024-05-21 19:00:00 America/New_York
-end_date: 2024-05-21 12:00:00 America/New_York
+end_date: 2024-05-21 21:00:00 America/New_York
 
 location: mit-open-space
 
