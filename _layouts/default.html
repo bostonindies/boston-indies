@@ -17,15 +17,6 @@ layout: meta
                     {% endfor %}
                 </div>
 
-                <div class="element">
-                    <p><b>JOIN US ON<b></p>
-                    {% for social in site.socials -%}
-                        {% if social.index == "discord" -%}
-                            {% include elements/button-social.html social=social -%}
-                        {% endif -%}
-                    {% endfor -%}
-                </div>
-                
             </div>
             
         </div>
