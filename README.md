@@ -14,20 +14,4 @@ Style:
  - Material Symbols
  - Rounded
 
-To build locally:
-
-Install Ruby https://www.ruby-lang.org/en/
-
-Install Bundler https://bundler.io/
-
-Run `bundle init` to create an empty gemfile
-
-Open the gemfile, add:
-
-`# gem "jekyll", "~> 4.3"`
-
-`gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`
-
-`gem "github-pages", "~> 232", group: :jekyll_plugins`
-
-Then use `bundle exec jekyll serve` to run the site locally
+To build locally, use `bundle exec jekyll serve`.

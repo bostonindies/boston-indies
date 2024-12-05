@@ -1,18 +1,18 @@
 title: "BOSTON INDIES 🔮💀"
-about: "Boston Indies is a rad community of local indie developers in Massachusetts! We host monthly events ranging from demo nights to talks."
+about: "Boston Indies is a rad community of local indie developers in Massachusetts! We host demo nights, talks, and more, come hang out!"
 featured_video: "uBfi7h6qEMQ"
 
 markdown: kramdown
 future: true
 timezone: America/New_York
 
-url: https://witchcat.net
+url: https://www.bostonindies.com
 
 legal: "© Boston Indies, all rights reserved."
 
 discord_invite: "https://discord.gg/sJrv3z7kgj"
 
-
+meetup: "https://www.meetup.com/bostongamedev/"
 
 collections:
   events:
