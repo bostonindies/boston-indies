@@ -52,38 +52,38 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  post-announcements-on-discord:
-    name: "post announcements on discord"
-    runs-on: ubuntu-latest
-    needs: deploy
-    permissions:
-      contents: write
-    steps:
-      - name: Feed to social media
-        uses: lwojcik/github-action-feed-to-social-media@v2.4.1
-        with:
-          feedUrl: 'https://witchcat.net/feed/discord/event-announcements.xml'
-          newestItemStrategy: 'latestDate'
-          cacheFileName: 'feed-to-social-media-announcements.json'
-          # Discord settings
-          discordEnable: true
-          discordPostFormat: "# 📣 ANNOUNCING: {title} 🔮💀\n@everyone\n\n{description}\n\n📝 **SIGN UP NOW!** 👀\n👉 {link}"
-          discordWebhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
-
-  post-reminders-on-discord:
-    name: "post reminders on discord"
-    runs-on: ubuntu-latest
-    needs: post-announcements-on-discord
-    permissions:
-      contents: write
-    steps:
-      - name: Feed to social media
-        uses: lwojcik/github-action-feed-to-social-media@v2.4.1
-        with:
-          feedUrl: 'https://witchcat.net/feed/discord/event-reminders.xml'
-          newestItemStrategy: 'latestDate'
-          cacheFileName: 'feed-to-social-media-reminders.json'
-          # Discord settings
-          discordEnable: true
-          discordPostFormat: "# 🚨 REMINDER: {title} IS TONIGHT!!! 🔮💀\n@everyone\n\n{description}\n\n⏰ **GRAB THE DEETS!** 🚗\n👉 {link}"
-          discordWebhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
+#  post-announcements-on-discord:
+#    name: "post announcements on discord"
+#    runs-on: ubuntu-latest
+#    needs: deploy
+#    permissions:
+#      contents: write
+#    steps:
+#      - name: Feed to social media
+#        uses: lwojcik/github-action-feed-to-social-media@v2.4.1
+#        with:
+#          feedUrl: 'https://witchcat.net/feed/discord/event-announcements.xml'
+#          newestItemStrategy: 'latestDate'
+#          cacheFileName: 'feed-to-social-media-announcements.json'
+#          # Discord settings
+#          discordEnable: true
+#          discordPostFormat: "# 📣 ANNOUNCING: {title} 🔮💀\n@everyone\n\n{description}\n\n📝 **SIGN UP #NOW!** 👀\n👉 {link}"
+#          discordWebhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
+#
+#  post-reminders-on-discord:
+#    name: "post reminders on discord"
+#    runs-on: ubuntu-latest
+#    needs: post-announcements-on-discord
+#    permissions:
+#      contents: write
+#    steps:
+#      - name: Feed to social media
+#        uses: lwojcik/github-action-feed-to-social-media@v2.4.1
+#        with:
+#          feedUrl: 'https://witchcat.net/feed/discord/event-reminders.xml'
+#          newestItemStrategy: 'latestDate'
+#          cacheFileName: 'feed-to-social-media-reminders.json'
+#          # Discord settings
+#          discordEnable: true
+#          discordPostFormat: "# 🚨 REMINDER: {title} IS TONIGHT!!! #🔮💀\n@everyone\n\n{description}\n\n⏰ **GRAB THE DEETS!** 🚗\n👉 {link}"
+#          discordWebhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
