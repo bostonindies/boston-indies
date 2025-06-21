@@ -41,10 +41,19 @@ title: "ALL EVENTS"
 
 {% assign display_past_events = false %}
 
-{% for event in site.events %}
+{% assign sorted_events = site.events | sort: 'date' | reverse %}
+
+{% assign previous_year = '' %}
+
+{% for event in sorted_events %}
     {%- capture processed_event_date -%}
         {{ event.end_date | date: "%s" }}
     {%- endcapture -%}
+
+    {%- capture processed_event_year -%}
+        {{ event.date | date: "%Y" }}
+    {%- endcapture -%}
+
 
     {% if processed_now_date >= processed_event_date %}
         
@@ -52,6 +61,14 @@ title: "ALL EVENTS"
             {% assign display_past_events = true %}
             <div class="section-header">PAST EVENTS</div>
             <div class="event-thumbnail-list element area no-select">
+        {% endif %}
+
+        {% if previous_year != processed_event_year %}
+
+        {% assign previous_year = processed_event_year %}
+
+        <div class="event-year">{{processed_event_year}}</div>
+
         {% endif %}
 
         {% include elements/event-thumbnail.html event=event %}
