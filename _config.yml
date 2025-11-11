@@ -15,7 +15,7 @@ meetup: "https://www.meetup.com/bostongamedev/"
 collections:
   events:
     output: true
-    permalink: :collection/:title
+    permalink: :collection/:name
   locations:
     output: false
   socials:
